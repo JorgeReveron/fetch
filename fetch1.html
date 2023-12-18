@@ -10,6 +10,7 @@
   <p>
     <button onclick="loadText('texto1.txt')">cargar texto 1</button>
     <button onclick="loadText('texto2.txt')">cargar texto 2</button>
+    <button onclick="loadText('texto3.html')">cargar texto 3</button>
   </p>
   <p id="content">No hay nada aun..</p>
   <script>
@@ -29,7 +30,7 @@
     function loadText(file) {
       fetch(file)
       .then(resp => resp.text())
-      .then(text => content.textContent = text);
+      .then(text => content.innerHTML = text);
     }
   </script>
 </body>
